@@ -1,0 +1,17 @@
+{
+  "name": "vonion",
+  "version": "0.0.1",
+  "description": "Vue components, layer by layer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonkendel/vonion.git"
+  },
+  "scripts": {},
+  "keywords": [
+    "vue",
+    "components",
+    "typescript"
+  ],
+  "author": "Anthon <anthon.kendel@gmail.com>",
+  "license": "MIT"
+}
