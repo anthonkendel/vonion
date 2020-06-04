@@ -2,9 +2,15 @@
   <div>
     <h2>Components</h2>
 
-    <o-input-demo />
+    <div class="columns">
+      <div class="column is-4">
+        <o-input-demo />
+      </div>
 
-    <o-textarea-demo />
+      <div class="column is-4">
+        <o-textarea-demo />
+      </div>
+    </div>
   </div>
 </template>
 
