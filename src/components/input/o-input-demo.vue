@@ -1,17 +1,13 @@
 <template>
-  <div>
-    <h3>OInput</h3>
-
-    <h4>Data</h4>
-    <pre>{{ data }}</pre>
-
+  <o-component-demo title="Input" :data="data">
     <o-input v-model="data.firstName" id="firstName">First name</o-input>
     <o-input v-model="data.lastName" id="lastName">Last name</o-input>
     <o-input v-model.number="data.age" id="age" type="number">Age</o-input>
-  </div>
+  </o-component-demo>
 </template>
 
 <script lang="ts">
+import { OComponentDemo } from '../demo';
 import OInput from './o-input.vue';
 import Vue from 'vue';
 
@@ -26,6 +22,6 @@ export default Vue.extend({
       },
     };
   },
-  components: { OInput },
+  components: { OInput, OComponentDemo },
 });
 </script>
