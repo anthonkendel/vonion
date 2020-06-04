@@ -1,8 +1,9 @@
 <template>
   <div class="o-textarea">
-    <label for="id" class="label">
+    <o-label :for="id">
       <slot name="default" />
-    </label>
+    </o-label>
+
     <textarea
       class="textarea"
       v-bind="{ rows: 4, cols: 20, ...$attrs }"
@@ -14,10 +15,12 @@
 </template>
 
 <script lang="ts">
+import { OLabel } from '../label';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OTextarea',
+  components: { OLabel },
   model: {
     prop: 'value',
     event: 'input',

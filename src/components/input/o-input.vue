@@ -1,8 +1,9 @@
 <template>
   <div class="o-input">
-    <label for="id" class="label">
+    <o-label :for="id">
       <slot name="default" />
-    </label>
+    </o-label>
+
     <input
       class="input"
       v-bind="{ type: 'text', ...$attrs }"
@@ -14,10 +15,12 @@
 </template>
 
 <script lang="ts">
+import { OLabel } from '../label';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OInput',
+  components: { OLabel },
   model: {
     prop: 'value',
     event: 'input',

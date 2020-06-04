@@ -1,8 +1,9 @@
 <template>
   <div class="o-select">
-    <label for="id" class="label">
+    <o-label :for="id">
       <slot name="default" />
-    </label>
+    </o-label>
+
     <select
       class="select"
       v-bind="{ ...$attrs }"
@@ -16,10 +17,12 @@
 </template>
 
 <script lang="ts">
+import { OLabel } from '../label';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OSelect',
+  components: { OLabel },
   model: {
     prop: 'value',
     event: 'change',
