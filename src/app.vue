@@ -1,6 +1,6 @@
 <template>
   <main id="app" class="main">
-    <h1>vOnion 🧅</h1>
+    <h1>vonion 🧅</h1>
 
     <o-components />
   </main>
