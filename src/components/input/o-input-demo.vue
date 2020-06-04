@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import OInput from './OInput.vue';
+import OInput from './o-input.vue';
 import Vue from 'vue';
 
 export default Vue.extend({

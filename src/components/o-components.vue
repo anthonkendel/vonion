@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { OInputDemo } from './OInput';
+import { OInputDemo } from './input';
 import Vue from 'vue';
 
 export default Vue.extend({
