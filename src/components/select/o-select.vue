@@ -45,13 +45,6 @@ export default Vue.extend({
 .o-select {
   margin-bottom: 0.2rem;
 
-  .label {
-    display: block;
-    font-size: inherit;
-    font-weight: 500;
-    margin-bottom: 0.2rem;
-  }
-
   .select {
     border-radius: 0px;
     border-width: 1px;

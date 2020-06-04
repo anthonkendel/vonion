@@ -43,13 +43,6 @@ export default Vue.extend({
 .o-textarea {
   margin-bottom: 0.2rem;
 
-  .label {
-    display: block;
-    font-size: inherit;
-    font-weight: 500;
-    margin-bottom: 0.2rem;
-  }
-
   .textarea {
     border-radius: 0px;
     border-width: 1px;
