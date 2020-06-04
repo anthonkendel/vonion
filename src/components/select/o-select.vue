@@ -1,15 +1,17 @@
 <template>
-  <div class="o-textarea">
+  <div class="o-select">
     <label for="id" class="label">
       <slot name="default" />
     </label>
-    <textarea
-      class="textarea"
-      v-bind="{ rows: 4, cols: 20, ...$attrs }"
-      v-on="{ ...$listeners, input: () => undefined }"
+    <select
+      class="select"
+      v-bind="{ ...$attrs }"
+      v-on="{ ...$listeners, change: () => undefined }"
       v-model="vModel"
       :id="id"
-    ></textarea>
+    >
+      <slot name="option" />
+    </select>
   </div>
 </template>
 
@@ -17,10 +19,10 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'OTextarea',
+  name: 'OSelect',
   model: {
     prop: 'value',
-    event: 'input',
+    event: 'change',
   },
   props: ['id', 'value'],
   computed: {
@@ -29,7 +31,7 @@ export default Vue.extend({
         return this.value;
       },
       set(value: unknown): void {
-        this.$emit('input', value);
+        this.$emit('change', value);
       },
     },
   },
@@ -37,7 +39,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.o-textarea {
+.o-select {
   margin-bottom: 0.2rem;
 
   .label {
@@ -47,7 +49,7 @@ export default Vue.extend({
     margin-bottom: 0.2rem;
   }
 
-  .textarea {
+  .select {
     border-radius: 0px;
     border-width: 1px;
     border: 2px solid #404040;

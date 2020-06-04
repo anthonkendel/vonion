@@ -8,6 +8,10 @@
       </div>
 
       <div class="column is-4">
+        <o-select-demo />
+      </div>
+
+      <div class="column is-4">
         <o-textarea-demo />
       </div>
     </div>
@@ -15,14 +19,16 @@
 </template>
 
 <script lang="ts">
-import { OInputDemo } from './input';
-import { OTextareaDemo } from './textarea';
 import Vue from 'vue';
+import { OInputDemo } from './input';
+import { OSelectDemo } from './select';
+import { OTextareaDemo } from './textarea';
 
 export default Vue.extend({
   name: 'OComponents',
   components: {
     OInputDemo,
+    OSelectDemo,
     OTextareaDemo,
   },
 });
