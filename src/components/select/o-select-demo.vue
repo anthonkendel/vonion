@@ -34,7 +34,7 @@ export default Vue.extend({
     return {
       data: {
         country: 'SWEDEN',
-        pet: 'DOG',
+        pet: ['DOG', 'BIRD'],
       },
     };
   },

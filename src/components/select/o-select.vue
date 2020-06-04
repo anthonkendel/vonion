@@ -43,14 +43,18 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .o-select {
-  margin-bottom: 0.2rem;
+  margin: 0 0.2rem 0.2rem;
 
   .select {
     border-radius: 0px;
     border-width: 1px;
     border: 2px solid #404040;
     font-size: inherit;
-    padding: 0.2rem 0.3rem;
+    padding: 0.4rem 0.6rem;
+
+    &[multiple] {
+      padding: 0.3rem 0.3rem;
+    }
 
     &:focus {
       outline-offset: 0;
