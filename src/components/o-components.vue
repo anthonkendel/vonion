@@ -8,15 +8,19 @@
       </div>
 
       <div class="column is-4">
-        <o-input-demo />
+        <o-checkbox-demo />
       </div>
 
       <div class="column is-4">
-        <o-select-demo />
+        <o-input-demo />
       </div>
     </div>
 
     <div class="columns">
+      <div class="column is-4">
+        <o-select-demo />
+      </div>
+
       <div class="column is-4">
         <o-textarea-demo />
       </div>
@@ -27,6 +31,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { OButtonDemo } from './button';
+import { OCheckboxDemo } from './checkbox';
 import { OInputDemo } from './input';
 import { OSelectDemo } from './select';
 import { OTextareaDemo } from './textarea';
@@ -35,6 +40,7 @@ export default Vue.extend({
   name: 'OComponents',
   components: {
     OButtonDemo,
+    OCheckboxDemo,
     OInputDemo,
     OSelectDemo,
     OTextareaDemo,
