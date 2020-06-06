@@ -22,12 +22,12 @@ export default Vue.extend({
   name: 'OCheckbox',
   components: { OLabel },
   model: {
-    prop: 'checked',
+    prop: 'vModelValue',
     event: 'change',
   },
   props: {
     id: String,
-    checked: {
+    vModelValue: {
       type: [String, Number, Array, Object, Boolean],
     },
     value: {
@@ -37,19 +37,19 @@ export default Vue.extend({
   },
   computed: {
     isArrayModel(): boolean {
-      return Array.isArray(this.checked);
+      return Array.isArray(this.vModelValue);
     },
     vModel: {
       get(): unknown {
         if (this.isArrayModel) {
-          return (this.checked as unknown[]).some((value) => JSON.stringify(value) === JSON.stringify(this.value));
+          return this.vModelValue.some((value: unknown) => JSON.stringify(value) === JSON.stringify(this.value));
         } else {
-          return this.checked === this.value;
+          return this.vModelValue === this.value;
         }
       },
       set(value: unknown): void {
         if (this.isArrayModel) {
-          const array = this.checked.slice();
+          const array = this.vModelValue.slice();
           const index = array.findIndex((v: unknown) => JSON.stringify(v) === JSON.stringify(this.value));
           if (index >= 0) {
             array.splice(index, 1);

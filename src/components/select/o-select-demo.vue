@@ -4,8 +4,8 @@
       Country
       <template v-slot:option>
         <option value="SWEDEN">Sweden</option>
-        <option value="DENMARK">Denmark</option>
-        <option value="FINLAND">Finland</option>
+        <option :value="{ value: 'DENMARK' }">Denmark</option>
+        <option :value="['FINLAND']">Finland</option>
         <option value="NORWAY">Norway</option>
       </template>
     </o-select>

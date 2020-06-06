@@ -22,14 +22,14 @@ export default Vue.extend({
   name: 'OInput',
   components: { OLabel },
   model: {
-    prop: 'value',
+    prop: 'vModelValue',
     event: 'input',
   },
-  props: ['id', 'value'],
+  props: ['id', 'vModelValue'],
   computed: {
     vModel: {
       get(): unknown {
-        return this.value;
+        return this.vModelValue;
       },
       set(value: unknown): void {
         this.$emit('input', value);

@@ -24,7 +24,7 @@ export default Vue.extend({
         apple: true,
         banana: false,
         cucumber: false,
-        fruits: [],
+        fruits: [{ value: 'BANANA' }],
       },
     };
   },
