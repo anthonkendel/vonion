@@ -2,17 +2,23 @@
   <main id="app" class="main">
     <h1>vonion 🧅</h1>
 
-    <o-components />
+    <h2>Components</h2>
+
+    <app-nav />
+
+    <hr />
+
+    <router-view></router-view>
   </main>
 </template>
 
 <script lang="ts">
-import { OComponents } from './components';
+import AppNav from './app-nav.vue';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'App',
-  components: { OComponents },
+  components: { AppNav },
 });
 </script>
 
