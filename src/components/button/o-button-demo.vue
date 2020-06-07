@@ -1,5 +1,5 @@
 <template>
-  <o-component-demo title="Button" :data="{}">
+  <o-component-demo title="Button">
     <o-button>Click me!</o-button>
     <o-button is-chive>No, click me!</o-button>
     <o-button is-red-onion>I'm nice and silent.</o-button>

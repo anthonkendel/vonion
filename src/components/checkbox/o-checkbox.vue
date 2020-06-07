@@ -5,6 +5,7 @@
       v-bind="$attrs"
       v-on="{ ...$listeners, change: () => undefined }"
       v-model="vModel"
+      type="checkbox"
       :id="id"
       :value="value"
     />
