@@ -3,10 +3,7 @@
     <h1>vonion 🧅</h1>
 
     <h2>Components</h2>
-
     <app-nav />
-
-    <hr />
 
     <router-view></router-view>
   </main>

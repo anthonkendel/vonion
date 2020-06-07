@@ -1,22 +1,28 @@
 <template>
-  <div>
+  <div class="demo">
     <h3>{{ title }}</h3>
 
-    <strong>Data</strong>
-    <div class="data">
-      <pre v-show="showData">{{ data }}</pre>
-      <button @click="showData = !showData">{{ showData ? 'hide data' : 'show data' }}</button>
-    </div>
-
     <slot name="default" />
+
+    <div class="demo-controls">
+      <h4>Data</h4>
+      <div class="data">
+        <o-button @click="showData = !showData">{{ showData ? 'hide data' : 'show data' }}</o-button>
+
+        <pre v-show="showData">{{ data }}</pre>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
+import { OButton } from '../button';
 import Vue from 'vue';
+
 export default Vue.extend({
   name: 'OComponentDemo',
   props: ['title', 'data'],
+  components: { OButton },
   data() {
     return {
       showData: false,
@@ -26,7 +32,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.data {
-  margin-bottom: 0.3rem;
+.demo {
+  padding: 1rem 0;
+
+  .demo-controls {
+    padding: 1rem 0;
+  }
 }
 </style>
