@@ -1,7 +1,7 @@
 <template>
   <button
     class="o-button button"
-    :class="{ chive: isChive, 'red-onion': isRedOnion, garlic: isGarlic }"
+    :class="{ chive: isChive, 'red-onion': isRedOnion }"
     v-bind="{ type: 'button', ...$attrs }"
     v-on="$listeners"
   >
@@ -17,12 +17,15 @@ export default Vue.extend({
   props: {
     isChive: Boolean,
     isRedOnion: Boolean,
-    isGarlic: Boolean,
   },
 });
 </script>
 
 <style lang="scss" scoped>
+$chive: #9fff79;
+$red-onion: #be79ff;
+$garlic: #fafafa;
+
 .o-button.button {
   border-radius: 0px;
   border-width: 1px;
@@ -31,8 +34,8 @@ export default Vue.extend({
   margin: 0 0.2rem 0.2rem;
   padding: 0.4rem 0.6rem;
 
-  /// Default button aka yellow onion button
-  background-color: #ffd679;
+  /// Default button a.k.a. yellow onion button
+  background-color: $garlic;
 
   &:focus {
     outline-offset: 0;
@@ -41,50 +44,37 @@ export default Vue.extend({
 
   &:hover {
     transition: background-color ease-in 100ms;
-    background-color: #ebc670;
+    background-color: darken($garlic, 5%);
   }
 
   &:active {
     transition: background-color ease-in 100ms;
-    background-color: #dab768;
+    background-color: darken($garlic, 10%);
   }
 
   /// Chive
   &.chive {
-    background-color: #9fff79;
+    background-color: $chive;
 
     &:hover {
-      background-color: #85eb70;
+      background-color: darken($chive, 5%);
     }
 
     &:active {
-      background-color: #88da68;
+      background-color: darken($chive, 10%);
     }
   }
 
   /// Red onion
   &.red-onion {
-    background-color: #be79ff;
+    background-color: $red-onion;
 
     &:hover {
-      background-color: #a570eb;
+      background-color: darken($red-onion, 5%);
     }
 
     &:active {
-      background-color: #9d68da;
-    }
-  }
-
-  /// Garlic
-  &.garlic {
-    background-color: #fafafa;
-
-    &:hover {
-      background-color: #e6e6e6;
-    }
-
-    &:active {
-      background-color: #d8d8d8;
+      background-color: darken($red-onion, 10%);
     }
   }
 }

@@ -3,7 +3,6 @@
     <o-button>Click me!</o-button>
     <o-button is-chive>No, click me!</o-button>
     <o-button is-red-onion>I'm nice and silent.</o-button>
-    <o-button is-garlic>Hmm</o-button>
   </o-component-demo>
 </template>
 
