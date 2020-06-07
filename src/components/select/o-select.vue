@@ -4,13 +4,7 @@
       <slot name="default" />
     </o-label>
 
-    <select
-      class="select"
-      v-bind="{ ...$attrs }"
-      v-on="{ ...$listeners, change: () => undefined }"
-      v-model="vModel"
-      :id="id"
-    >
+    <select class="select" v-bind="$attrs" v-on="{ ...$listeners, change: () => undefined }" v-model="vModel" :id="id">
       <slot name="option" />
     </select>
   </div>
@@ -27,7 +21,10 @@ export default Vue.extend({
     prop: 'vModelValue',
     event: 'change',
   },
-  props: ['id', 'vModelValue'],
+  props: {
+    id: String,
+    vModelValue: [String, Number, Array, Object, Boolean],
+  },
   computed: {
     vModel: {
       get(): unknown {

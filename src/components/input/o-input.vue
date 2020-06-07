@@ -25,7 +25,10 @@ export default Vue.extend({
     prop: 'vModelValue',
     event: 'input',
   },
-  props: ['id', 'vModelValue'],
+  props: {
+    id: String,
+    vModelValue: [String, Number],
+  },
   computed: {
     vModel: {
       get(): unknown {

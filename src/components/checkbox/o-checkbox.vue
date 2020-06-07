@@ -2,10 +2,11 @@
   <div class="o-checkbox">
     <input
       class="checkbox"
-      v-bind="{ type: 'checkbox', ...$attrs }"
+      v-bind="$attrs"
       v-on="{ ...$listeners, change: () => undefined }"
       v-model="vModel"
       :id="id"
+      :value="value"
     />
 
     <o-label :for="id" class="label">
@@ -27,12 +28,10 @@ export default Vue.extend({
   },
   props: {
     id: String,
-    vModelValue: {
-      type: [String, Number, Array, Object, Boolean],
-    },
+    vModelValue: [String, Number, Array, Object, Boolean],
     value: {
-      type: [String, Number, Array, Object, Boolean],
       default: true,
+      type: [String, Number, Array, Object, Boolean],
     },
   },
   computed: {
