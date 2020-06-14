@@ -1,26 +1,27 @@
 <template>
-  <div class="o-textarea">
+  <o-form-el>
     <o-label :for="id">
       <slot name="default" />
     </o-label>
 
     <textarea
       class="textarea"
-      v-bind="{ rows: 4, cols: 20, ...$attrs }"
+      v-bind="{ rows: 4, cols: 40, ...$attrs }"
       v-on="{ ...$listeners, input: () => undefined }"
       v-model="vModel"
       :id="id"
     ></textarea>
-  </div>
+  </o-form-el>
 </template>
 
 <script lang="ts">
+import { OFormEl } from '../form-el';
 import { OLabel } from '../label';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OTextarea',
-  components: { OLabel },
+  components: { OFormEl, OLabel },
   model: {
     prop: 'vModelValue',
     event: 'input',
@@ -43,20 +44,16 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.o-textarea {
-  margin: 0 0.2rem 0.2rem;
+.textarea {
+  border-radius: 0px;
+  border-width: 1px;
+  border: 2px solid #404040;
+  font-size: inherit;
+  padding: 0.4rem 0.6rem;
 
-  .textarea {
-    border-radius: 0px;
-    border-width: 1px;
-    border: 2px solid #404040;
-    font-size: inherit;
-    padding: 0.4rem 0.6rem;
-
-    &:focus {
-      outline-offset: 0;
-      outline: 3px solid #ffb900;
-    }
+  &:focus {
+    outline-offset: 0;
+    outline: 3px solid #ffb900;
   }
 }
 </style>

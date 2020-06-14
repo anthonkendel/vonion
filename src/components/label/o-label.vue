@@ -1,5 +1,5 @@
 <template>
-  <label v-bind="$attrs" v-on="$listeners" class="o-label label">
+  <label v-bind="$attrs" v-on="$listeners" class="label">
     <slot name="default" />
   </label>
 </template>
@@ -12,7 +12,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.o-label.label {
+.label {
   display: block;
   font-size: inherit;
   font-weight: 500;

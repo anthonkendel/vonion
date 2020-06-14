@@ -1,5 +1,5 @@
 <template>
-  <div class="o-input">
+  <o-form-el>
     <o-label :for="id">
       <slot name="default" />
     </o-label>
@@ -11,16 +11,17 @@
       v-model="vModel"
       :id="id"
     />
-  </div>
+  </o-form-el>
 </template>
 
 <script lang="ts">
+import { OFormEl } from '../form-el';
 import { OLabel } from '../label';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OInput',
-  components: { OLabel },
+  components: { OLabel, OFormEl },
   model: {
     prop: 'vModelValue',
     event: 'input',
@@ -43,20 +44,16 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.o-input {
-  margin: 0 0.2rem 0.2rem;
+.input {
+  border-radius: 0px;
+  border-width: 1px;
+  border: 2px solid #404040;
+  font-size: inherit;
+  padding: 0.4rem 0.6rem;
 
-  .input {
-    border-radius: 0px;
-    border-width: 1px;
-    border: 2px solid #404040;
-    font-size: inherit;
-    padding: 0.4rem 0.6rem;
-
-    &:focus {
-      outline-offset: 0;
-      outline: 3px solid #ffb900;
-    }
+  &:focus {
+    outline-offset: 0;
+    outline: 3px solid #ffb900;
   }
 }
 </style>

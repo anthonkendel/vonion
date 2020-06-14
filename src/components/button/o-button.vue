@@ -1,19 +1,25 @@
 <template>
-  <button
-    class="o-button button"
-    :class="{ chive: isChive, 'red-onion': isRedOnion }"
-    v-bind="{ type: 'button', ...$attrs }"
-    v-on="$listeners"
-  >
-    <slot name="default" />
-  </button>
+  <o-form-el>
+    <button
+      class="button"
+      :class="{ chive: isChive, 'red-onion': isRedOnion }"
+      v-bind="{ type: 'button', ...$attrs }"
+      v-on="$listeners"
+    >
+      <slot name="default" />
+    </button>
+  </o-form-el>
 </template>
 
 <script lang="ts">
+import { OFormEl } from '../form-el';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OButton',
+  components: {
+    OFormEl,
+  },
   props: {
     isChive: Boolean,
     isRedOnion: Boolean,
@@ -26,15 +32,14 @@ $chive: #9fff79;
 $red-onion: #be79ff;
 $garlic: #fafafa;
 
-.o-button.button {
+.button {
   border-radius: 0px;
   border-width: 1px;
   border: 2px solid #404040;
   font-size: inherit;
-  margin: 0 0.2rem 0.2rem;
   padding: 0.4rem 0.6rem;
 
-  /// Default button a.k.a. yellow onion button
+  /// Default button a.k.a. garlic button
   background-color: $garlic;
 
   &:focus {

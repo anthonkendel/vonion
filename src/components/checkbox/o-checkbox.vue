@@ -1,5 +1,5 @@
 <template>
-  <div class="o-checkbox">
+  <o-form-el>
     <input
       class="checkbox"
       v-bind="$attrs"
@@ -13,16 +13,17 @@
     <o-label :for="id" class="label">
       <slot name="default" />
     </o-label>
-  </div>
+  </o-form-el>
 </template>
 
 <script lang="ts">
+import { OFormEl } from '../form-el';
 import { OLabel } from '../label';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OCheckbox',
-  components: { OLabel },
+  components: { OFormEl, OLabel },
   model: {
     prop: 'vModelValue',
     event: 'change',
@@ -67,24 +68,19 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.o-checkbox {
+.label {
   cursor: pointer;
-  margin: 0 0.2rem 0.2rem;
+  display: inline-block;
+}
 
-  .label {
-    cursor: pointer;
-    display: inline-block;
-  }
+.checkbox {
+  cursor: pointer;
+  font-size: inherit;
+  margin-right: 0.5rem;
 
-  .checkbox {
-    cursor: pointer;
-    font-size: inherit;
-    margin-right: 0.5rem;
-
-    &:focus {
-      outline-offset: 0;
-      outline: 3px solid #ffb900;
-    }
+  &:focus {
+    outline-offset: 0;
+    outline: 3px solid #ffb900;
   }
 }
 </style>
