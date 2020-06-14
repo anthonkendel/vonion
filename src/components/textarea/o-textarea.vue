@@ -1,8 +1,12 @@
 <template>
   <o-element>
-    <o-label :for="id">
-      <slot name="default" />
-    </o-label>
+    <div class="flex-space-between">
+      <o-label :for="id">
+        <slot name="default" />
+      </o-label>
+
+      <o-validation-message :parent="this" />
+    </div>
 
     <textarea
       class="textarea"
@@ -17,11 +21,12 @@
 <script lang="ts">
 import { OElement } from '../element';
 import { OLabel } from '../label';
+import { OValidationMessage } from '../validation-message';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OTextarea',
-  components: { OElement, OLabel },
+  components: { OElement, OLabel, OValidationMessage },
   model: {
     prop: 'vModelValue',
     event: 'input',

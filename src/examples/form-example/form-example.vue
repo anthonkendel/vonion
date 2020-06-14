@@ -7,9 +7,9 @@
         corporis ad.
       </o-crate>
 
-      <o-input v-model="data.firstName">First name</o-input>
+      <o-input v-model="data.firstName" required>First name</o-input>
 
-      <o-input v-model="data.lastName">Last name</o-input>
+      <o-input v-model="data.lastName" required>Last name</o-input>
 
       <o-fieldset>
         <o-legend>Hobbies:</o-legend>
@@ -21,9 +21,9 @@
         <o-checkbox v-model="data.hobbies" id="hobbies-BOARD_GAMES" value="BOARD_GAMES">Board games</o-checkbox>
       </o-fieldset>
 
-      <o-textarea v-model="data.about" cols="100">About</o-textarea>
+      <o-textarea required minlength="10" v-model="data.about" cols="100">About</o-textarea>
 
-      <o-select v-model.number="data.age">
+      <o-select required v-model.number="data.age">
         Age
         <template v-slot:option>
           <option v-for="n of 100" :key="n">{{ n }}</option>
@@ -53,11 +53,10 @@ export default Vue.extend({
     return {
       data: {
         firstName: 'John',
-        lastName: 'Doesson',
+        lastName: '',
         hobbies: ['ONEWHEEL', 'COMPUTERS'],
-        about:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas harum accusamus eligendi molestias laudantium rerum tempora in adipisci dolore. Maxime modi accusamus debitis similique aperiam exercitationem, deleniti iusto corporis ad.',
-        age: 10,
+        about: '',
+        age: null,
         gender: 'MALE',
       },
     };

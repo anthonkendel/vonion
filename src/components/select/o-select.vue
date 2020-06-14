@@ -1,8 +1,12 @@
 <template>
   <o-element>
-    <o-label :for="id">
-      <slot name="default" />
-    </o-label>
+    <div class="flex-space-between">
+      <o-label :for="id">
+        <slot name="default" />
+      </o-label>
+
+      <o-validation-message :parent="this" />
+    </div>
 
     <select class="select" v-bind="$attrs" v-on="{ ...$listeners, change: () => undefined }" v-model="vModel" :id="id">
       <slot name="option" />
@@ -13,11 +17,12 @@
 <script lang="ts">
 import { OElement } from '../element';
 import { OLabel } from '../label';
+import { OValidationMessage } from '../validation-message';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OSelect',
-  components: { OElement, OLabel },
+  components: { OElement, OLabel, OValidationMessage },
   model: {
     prop: 'vModelValue',
     event: 'change',
