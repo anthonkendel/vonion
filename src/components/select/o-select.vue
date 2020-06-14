@@ -49,10 +49,6 @@ export default Vue.extend({
     font-size: inherit;
     padding: 0.4rem 0.6rem;
 
-    &[multiple] {
-      padding: 0.3rem 0.3rem;
-    }
-
     &:focus {
       outline-offset: 0;
       outline: 3px solid #ffb900;
