@@ -3,6 +3,16 @@ import VueRouter from 'vue-router';
 import App from './app.vue';
 import './styles/main.scss';
 
+/**
+ * Component imports
+ */
+import ButtonDemo from './components/button/o-button-demo.vue';
+import CheckboxDemo from './components/checkbox/o-checkbox-demo.vue';
+import InputDemo from './components/input/o-input-demo.vue';
+import RadioDemo from './components/radio/o-radio-demo.vue';
+import SelectDemo from './components/select/o-select-demo.vue';
+import TextareaDemo from './components/textarea/o-textarea-demo.vue';
+
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
@@ -12,32 +22,32 @@ const router = new VueRouter({
     {
       name: 'Button',
       path: '/button',
-      component: () => import('./components/button/o-button-demo.vue'),
+      component: ButtonDemo,
     },
     {
       name: 'Checkbox',
       path: '/checkbox',
-      component: () => import('./components/checkbox/o-checkbox-demo.vue'),
+      component: CheckboxDemo,
     },
     {
       name: 'Input',
       path: '/input',
-      component: () => import('./components/input/o-input-demo.vue'),
+      component: InputDemo,
     },
     {
       name: 'Radio',
       path: '/radio',
-      component: () => import('./components/radio/o-radio-demo.vue'),
+      component: RadioDemo,
     },
     {
       name: 'Select',
       path: '/select',
-      component: () => import('./components/select/o-select-demo.vue'),
+      component: SelectDemo,
     },
     {
       name: 'Textarea',
       path: '/textarea',
-      component: () => import('./components/textarea/o-textarea-demo.vue'),
+      component: TextareaDemo,
     },
   ],
 });
