@@ -1,5 +1,5 @@
 <template>
-  <o-form-el>
+  <o-element>
     <button
       class="button"
       :class="{ chive: isChive, 'red-onion': isRedOnion }"
@@ -8,17 +8,17 @@
     >
       <slot name="default" />
     </button>
-  </o-form-el>
+  </o-element>
 </template>
 
 <script lang="ts">
-import { OFormEl } from '../form-el';
+import { OElement } from '../element';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OButton',
   components: {
-    OFormEl,
+    OElement,
   },
   props: {
     isChive: Boolean,

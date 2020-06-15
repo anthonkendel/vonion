@@ -1,5 +1,5 @@
 <template>
-  <o-form-el>
+  <o-element>
     <input
       class="radio"
       v-bind="$attrs"
@@ -13,17 +13,17 @@
     <o-label :for="id" class="label">
       <slot name="default" />
     </o-label>
-  </o-form-el>
+  </o-element>
 </template>
 
 <script lang="ts">
-import { OFormEl } from '../form-el';
+import { OElement } from '../element';
 import { OLabel } from '../label';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'ORadio',
-  components: { OFormEl, OLabel },
+  components: { OElement, OLabel },
   model: {
     prop: 'vModelValue',
     event: 'change',

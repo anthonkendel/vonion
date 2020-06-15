@@ -1,5 +1,5 @@
 <template>
-  <o-form-el>
+  <o-element>
     <o-label :for="id">
       <slot name="default" />
     </o-label>
@@ -7,17 +7,17 @@
     <select class="select" v-bind="$attrs" v-on="{ ...$listeners, change: () => undefined }" v-model="vModel" :id="id">
       <slot name="option" />
     </select>
-  </o-form-el>
+  </o-element>
 </template>
 
 <script lang="ts">
-import { OFormEl } from '../form-el';
+import { OElement } from '../element';
 import { OLabel } from '../label';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OSelect',
-  components: { OFormEl, OLabel },
+  components: { OElement, OLabel },
   model: {
     prop: 'vModelValue',
     event: 'change',

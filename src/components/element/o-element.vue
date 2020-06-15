@@ -1,18 +1,16 @@
 <template>
-  <div class="form-el">
+  <div class="element">
     <slot name="default" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-export default Vue.extend({
-  name: 'OFormEl',
-});
+export default Vue.extend({ name: 'OElement' });
 </script>
 
 <style lang="scss" scoped>
-.form-el {
+.element {
   margin: 0 0.2rem 0.2rem;
 }
 </style>

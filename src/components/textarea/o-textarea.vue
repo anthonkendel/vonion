@@ -1,5 +1,5 @@
 <template>
-  <o-form-el>
+  <o-element>
     <o-label :for="id">
       <slot name="default" />
     </o-label>
@@ -11,17 +11,17 @@
       v-model="vModel"
       :id="id"
     ></textarea>
-  </o-form-el>
+  </o-element>
 </template>
 
 <script lang="ts">
-import { OFormEl } from '../form-el';
+import { OElement } from '../element';
 import { OLabel } from '../label';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OTextarea',
-  components: { OFormEl, OLabel },
+  components: { OElement, OLabel },
   model: {
     prop: 'vModelValue',
     event: 'input',
