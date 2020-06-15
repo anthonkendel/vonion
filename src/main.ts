@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './app.vue';
 import './styles/main.scss';
+import VOnion from './vonion-plugin';
 
 /**
  * Component imports
@@ -16,6 +17,7 @@ import TextareaDemo from './components/textarea/o-textarea-demo.vue';
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
+Vue.use(VOnion);
 
 const router = new VueRouter({
   routes: [

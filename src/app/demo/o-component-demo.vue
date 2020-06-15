@@ -16,13 +16,14 @@
 </template>
 
 <script lang="ts">
-import { OButton } from '../button';
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OComponentDemo',
-  props: ['title', 'data'],
-  components: { OButton },
+  props: {
+    title: String,
+    data: Object,
+  },
   data() {
     return {
       showData: false,

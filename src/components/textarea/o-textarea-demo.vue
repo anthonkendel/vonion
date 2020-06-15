@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { OComponentDemo } from '../demo';
+import { OComponentDemo } from '../../app/demo';
 import OTextarea from './o-textarea.vue';
 import Vue from 'vue';
 

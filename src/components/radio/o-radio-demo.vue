@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { OComponentDemo } from '../demo';
+import { OComponentDemo } from '../../app/demo';
 import ORadio from './o-radio.vue';
 import Vue from 'vue';
 

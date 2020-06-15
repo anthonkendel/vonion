@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import { OComponentDemo } from '../demo';
+import { OComponentDemo } from '../../app/demo';
 import OSelect from './o-select.vue';
 import Vue from 'vue';
 
