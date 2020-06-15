@@ -1,5 +1,6 @@
 export * from './button';
 export * from './checkbox';
+export * from './crate';
 export * from './form-el';
 export * from './input';
 export * from './label';

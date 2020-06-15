@@ -8,6 +8,7 @@ import VOnion from './vonion-plugin';
  * Component imports
  */
 import ButtonDemo from './components/button/o-button-demo.vue';
+import CrateDemo from './components/crate/o-crate-demo.vue';
 import CheckboxDemo from './components/checkbox/o-checkbox-demo.vue';
 import InputDemo from './components/input/o-input-demo.vue';
 import RadioDemo from './components/radio/o-radio-demo.vue';
@@ -25,6 +26,11 @@ const router = new VueRouter({
       name: 'Button',
       path: '/button',
       component: ButtonDemo,
+    },
+    {
+      name: 'Crate',
+      path: '/crate',
+      component: CrateDemo,
     },
     {
       name: 'Checkbox',

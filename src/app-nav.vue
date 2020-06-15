@@ -43,6 +43,10 @@ export default Vue.extend({
           name: 'Button',
           key: 'button',
         },
+        {
+          name: 'Crate',
+          key: 'crate',
+        },
       ],
     };
   },
