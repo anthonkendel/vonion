@@ -2,7 +2,6 @@
   <main id="app" class="main">
     <h1>vonion 🧅</h1>
 
-    <h2>Components</h2>
     <app-nav />
 
     <router-view></router-view>

@@ -15,6 +15,9 @@ import RadioDemo from './components/radio/o-radio-demo.vue';
 import SelectDemo from './components/select/o-select-demo.vue';
 import TextareaDemo from './components/textarea/o-textarea-demo.vue';
 
+import Examples from './examples/examples.vue';
+import FormExample from './examples/form-example/form-example.vue';
+
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
@@ -56,6 +59,18 @@ const router = new VueRouter({
       name: 'Textarea',
       path: '/textarea',
       component: TextareaDemo,
+    },
+    {
+      name: 'Examples',
+      path: '/examples',
+      component: Examples,
+      children: [
+        {
+          name: 'FormExample',
+          path: 'form-example',
+          component: FormExample,
+        },
+      ],
     },
   ],
 });
