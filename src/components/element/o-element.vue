@@ -11,6 +11,6 @@ export default Vue.extend({ name: 'OElement' });
 
 <style lang="scss" scoped>
 .element {
-  margin: 0 0.2rem 0.2rem;
+  margin: 0 0.2rem 0.8rem;
 }
 </style>

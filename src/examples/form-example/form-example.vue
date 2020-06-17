@@ -11,15 +11,15 @@
 
       <o-input v-model="data.lastName">Last name</o-input>
 
-      <fieldset>
-        <legend>Hobbies:</legend>
+      <o-fieldset>
+        <o-legend>Hobbies:</o-legend>
         <o-checkbox v-model="data.hobbies" id="hobbies-ONEWHEEL" value="ONEWHEEL">Onewheel</o-checkbox>
         <o-checkbox v-model="data.hobbies" id="hobbies-HORSES" value="HORSES">Horses</o-checkbox>
         <o-checkbox v-model="data.hobbies" id="hobbies-COMPUTERS" value="COMPUTERS">Computers</o-checkbox>
         <o-checkbox v-model="data.hobbies" id="hobbies-CATS" value="CATS">Cats</o-checkbox>
         <o-checkbox v-model="data.hobbies" id="hobbies-VIDEO_GAMES" value="VIDEO_GAMES">Video games</o-checkbox>
         <o-checkbox v-model="data.hobbies" id="hobbies-BOARD_GAMES" value="BOARD_GAMES">Board games</o-checkbox>
-      </fieldset>
+      </o-fieldset>
 
       <o-textarea v-model="data.about" cols="100">About</o-textarea>
 
@@ -30,12 +30,12 @@
         </template>
       </o-select>
 
-      <fieldset>
-        <legend>Gender:</legend>
+      <o-fieldset>
+        <o-legend>Gender:</o-legend>
         <o-radio v-model="data.gender" id="gender-MALE" name="gender" value="MALE">Male</o-radio>
         <o-radio v-model="data.gender" id="gender-FEMALE" name="gender" value="FEMALE">Female</o-radio>
         <o-radio v-model="data.gender" id="gender-UNKNOWN" name="gender" value="UNKNOWN">Unknown</o-radio>
-      </fieldset>
+      </o-fieldset>
 
       <o-button type="submit" is-chive>Submit</o-button>
       <o-button type="button" @click="onClickCancel">Cancel</o-button>
