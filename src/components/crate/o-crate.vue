@@ -23,8 +23,8 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '../../styles/main.scss';
 .crate {
-  border: 1px solid $black-garlic;
-  border-radius: 2px;
+  border: 2px solid $black-garlic;
+  border-radius: 4px;
   background-color: $garlic;
   padding: 1rem 0.8rem;
 

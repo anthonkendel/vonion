@@ -47,8 +47,7 @@ export default Vue.extend({
 @import '../../styles/main.scss';
 
 .input {
-  border-radius: 0px;
-  border-width: 1px;
+  border-radius: 4px;
   border: 2px solid $black-garlic;
   font-size: inherit;
   padding: 0.4rem 0.6rem;
