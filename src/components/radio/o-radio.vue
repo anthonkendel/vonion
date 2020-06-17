@@ -1,5 +1,5 @@
 <template>
-  <o-element>
+  <o-element is-row>
     <input
       class="radio"
       v-bind="$attrs"
