@@ -44,16 +44,18 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/main.scss';
+
 .input {
   border-radius: 0px;
   border-width: 1px;
-  border: 2px solid #404040;
+  border: 2px solid $black-garlic;
   font-size: inherit;
   padding: 0.4rem 0.6rem;
 
   &:focus {
     outline-offset: 0;
-    outline: 3px solid #ffb900;
+    outline: 3px solid $yellow-onion;
   }
 }
 </style>

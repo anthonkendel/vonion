@@ -28,14 +28,12 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-$chive: #9fff79;
-$red-onion: #be79ff;
-$garlic: #fafafa;
+@import '../../styles/main.scss';
 
 .button {
   border-radius: 0px;
   border-width: 1px;
-  border: 2px solid #404040;
+  border: 2px solid $black-garlic;
   font-size: inherit;
   padding: 0.4rem 0.6rem;
 
@@ -44,7 +42,7 @@ $garlic: #fafafa;
 
   &:focus {
     outline-offset: 0;
-    outline: 3px solid #ffb900;
+    outline: 3px solid $yellow-onion;
   }
 
   &:hover {

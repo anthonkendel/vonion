@@ -17,11 +17,13 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/main.scss';
+
 .fieldset {
   border: none;
   padding: 0;
   margin: 0;
-  border-left: 2px solid #404040;
+  border-left: 2px solid $black-garlic;
   padding-left: 0.5rem;
 }
 </style>

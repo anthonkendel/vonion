@@ -50,6 +50,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/main.scss';
+
 .label {
   cursor: pointer;
   display: inline-block;
@@ -62,7 +64,7 @@ export default Vue.extend({
 
   &:focus {
     outline-offset: 0;
-    outline: 3px solid #ffb900;
+    outline: 3px solid $yellow-onion;
   }
 }
 </style>

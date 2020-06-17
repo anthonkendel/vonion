@@ -21,12 +21,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-$chive: #9fff79;
-$garlic: #fafafa;
-$red-onion: #be79ff;
-
+@import '../../styles/main.scss';
 .crate {
-  border: 1px solid #404040;
+  border: 1px solid $black-garlic;
   border-radius: 2px;
   background-color: $garlic;
   padding: 1rem 0.8rem;
