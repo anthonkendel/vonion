@@ -4,7 +4,7 @@
 
     <slot name="default" />
 
-    <div class="demo-controls">
+    <div class="demo-controls" v-if="data">
       <h4>Data</h4>
       <div class="data">
         <o-button @click="showData = !showData">{{ showData ? 'hide data' : 'show data' }}</o-button>

@@ -1,5 +1,5 @@
 <template>
-  <o-component-demo title="Crate" :data="data">
+  <o-component-demo title="Crate">
     <o-crate>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto sunt velit facilis voluptatem dolore
       alias pariatur exercitationem harum, incidunt labore sint veniam eos fugit, accusantium earum impedit tempore
@@ -25,11 +25,6 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'OCrateDemo',
-  data() {
-    return {
-      data: {},
-    };
-  },
   components: { OCrate, OComponentDemo },
 });
 </script>

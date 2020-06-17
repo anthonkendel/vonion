@@ -14,6 +14,10 @@ import InputDemo from './components/input/o-input-demo.vue';
 import RadioDemo from './components/radio/o-radio-demo.vue';
 import SelectDemo from './components/select/o-select-demo.vue';
 import TextareaDemo from './components/textarea/o-textarea-demo.vue';
+import ElementDemo from './components/element/o-element-demo.vue';
+import FieldsetDemo from './components/fieldset/o-fieldset-demo.vue';
+import LabelDemo from './components/label/o-label-demo.vue';
+import LegendDemo from './components/legend/o-legend-demo.vue';
 
 import Examples from './examples/examples.vue';
 import FormExample from './examples/form-example/form-example.vue';
@@ -59,6 +63,26 @@ const router = new VueRouter({
       name: 'Textarea',
       path: '/textarea',
       component: TextareaDemo,
+    },
+    {
+      name: 'Element',
+      path: '/element',
+      component: ElementDemo,
+    },
+    {
+      name: 'Fieldset',
+      path: '/fieldset',
+      component: FieldsetDemo,
+    },
+    {
+      name: 'Label',
+      path: '/label',
+      component: LabelDemo,
+    },
+    {
+      name: 'Legend',
+      path: '/legend',
+      component: LegendDemo,
     },
     {
       name: 'Examples',

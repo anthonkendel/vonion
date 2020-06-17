@@ -50,6 +50,26 @@ export default Vue.extend({
           name: 'Crate',
           key: 'crate',
         },
+        {
+          text: 'Element',
+          name: 'Element',
+          key: 'element',
+        },
+        {
+          text: 'Fieldset',
+          name: 'Fieldset',
+          key: 'fieldset',
+        },
+        {
+          text: 'Label',
+          name: 'Label',
+          key: 'label',
+        },
+        {
+          text: 'Legend',
+          name: 'Legend',
+          key: 'legend',
+        },
 
         {
           text: 'Examples',
