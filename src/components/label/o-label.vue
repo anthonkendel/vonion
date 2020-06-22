@@ -15,7 +15,7 @@ export default Vue.extend({
 .label {
   display: block;
   font-size: inherit;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 0.2rem;
 }
 </style>

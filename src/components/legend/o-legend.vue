@@ -15,7 +15,7 @@ export default Vue.extend({
 .legend {
   display: block;
   font-size: inherit;
-  font-weight: 500;
-  margin-bottom: 0.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
 }
 </style>

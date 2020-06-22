@@ -18,14 +18,6 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss">
-html {
-  font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-    'Helvetica Neue', sans-serif;
-}
-</style>
-
 <style lang="scss" scoped>
 .main {
   max-width: 80rem;
