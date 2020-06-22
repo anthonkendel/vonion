@@ -16,7 +16,7 @@
         <option value="DOG">Dog</option>
         <option value="CAT">Cat</option>
         <option value="BIRD">Bird</option>
-        <option value="CUCUMBER">Cucumer</option>
+        <option value="CUCUMBER">Cucumber</option>
         <option value="HORSE">Horse</option>
       </template>
     </o-select>

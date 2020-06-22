@@ -9,6 +9,7 @@ import VOnion from './vonion-plugin';
  */
 import ButtonDemo from './components/button/o-button-demo.vue';
 import CrateDemo from './components/crate/o-crate-demo.vue';
+import DatalistDemo from './components/datalist/o-datalist-demo.vue';
 import CheckboxDemo from './components/checkbox/o-checkbox-demo.vue';
 import InputDemo from './components/input/o-input-demo.vue';
 import RadioDemo from './components/radio/o-radio-demo.vue';
@@ -38,6 +39,11 @@ const router = new VueRouter({
       name: 'Crate',
       path: '/crate',
       component: CrateDemo,
+    },
+    {
+      name: 'Datalist',
+      path: '/datalist',
+      component: DatalistDemo,
     },
     {
       name: 'Checkbox',

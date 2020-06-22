@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav class="columns">
-      <router-link class="column is-narrow" v-for="route in routes" :key="route.key" :to="{ name: route.name }">{{
-        route.text
-      }}</router-link>
+      <router-link class="column is-narrow" v-for="route in routes" :key="route.key" :to="{ name: route.name }">
+        {{ route.text }}
+      </router-link>
     </nav>
   </div>
 </template>
@@ -49,6 +49,11 @@ export default Vue.extend({
           text: 'Crate',
           name: 'Crate',
           key: 'crate',
+        },
+        {
+          text: 'Datalist',
+          name: 'Datalist',
+          key: 'datalist',
         },
         {
           text: 'Element',

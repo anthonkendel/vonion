@@ -1,6 +1,7 @@
 export * from './button';
 export * from './checkbox';
 export * from './crate';
+export * from './datalist';
 export * from './element';
 export * from './fieldset';
 export * from './input';
