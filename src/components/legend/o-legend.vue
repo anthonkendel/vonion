@@ -14,6 +14,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .legend {
   display: block;
+  font-family: inherit;
   font-size: inherit;
   font-weight: 700;
   margin-bottom: 0.8rem;

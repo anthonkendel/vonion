@@ -49,6 +49,7 @@ export default Vue.extend({
 .input {
   border-radius: 4px;
   border: 2px solid $black-garlic;
+  font-family: inherit;
   font-size: inherit;
   padding: 0.4rem 0.6rem;
 

@@ -55,10 +55,13 @@ export default Vue.extend({
 .label {
   cursor: pointer;
   display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .radio {
   cursor: pointer;
+  font-family: inherit;
   font-size: inherit;
   margin-right: 0.5rem;
 
