@@ -1,7 +1,7 @@
 <template>
   <div>
-    <nav class="columns">
-      <router-link class="column is-narrow" v-for="route in routes" :key="route.key" :to="{ name: route.name }">
+    <nav class="slices">
+      <router-link class="slice" v-for="route in routes" :key="route.key" :to="{ name: route.name }">
         {{ route.text }}
       </router-link>
     </nav>
@@ -86,3 +86,9 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.slice {
+  padding: 0 0.5rem;
+}
+</style>
