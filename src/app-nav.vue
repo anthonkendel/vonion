@@ -75,6 +75,11 @@ export default Vue.extend({
           name: 'Legend',
           key: 'legend',
         },
+        {
+          text: 'Datepicker',
+          name: 'Datepicker',
+          key: 'datepicker',
+        },
 
         {
           text: 'Examples',

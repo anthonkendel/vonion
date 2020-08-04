@@ -19,6 +19,7 @@ import ElementDemo from './components/element/o-element-demo.vue';
 import FieldsetDemo from './components/fieldset/o-fieldset-demo.vue';
 import LabelDemo from './components/label/o-label-demo.vue';
 import LegendDemo from './components/legend/o-legend-demo.vue';
+import DatepickerDemo from './components/datepicker/o-datepicker-demo.vue';
 
 import Examples from './examples/examples.vue';
 import FormExample from './examples/form-example/form-example.vue';
@@ -89,6 +90,11 @@ const router = new VueRouter({
       name: 'Legend',
       path: '/legend',
       component: LegendDemo,
+    },
+    {
+      name: 'Datepicker',
+      path: '/datepicker',
+      component: DatepickerDemo,
     },
     {
       name: 'Examples',
