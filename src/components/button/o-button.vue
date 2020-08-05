@@ -69,6 +69,7 @@ export default Vue.extend({
 
   /// Red onion
   &.red-onion {
+    color: white;
     background-color: $red-onion;
 
     &:hover {
