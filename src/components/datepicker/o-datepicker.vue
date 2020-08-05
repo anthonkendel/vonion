@@ -13,7 +13,11 @@
             class="day"
             v-for="dateTime in dateTimes"
             @click="onClickDay(dateTime)"
-            :class="{ today: isToday(dateTime), outside: isOutsideMonth(dateTime, calendarValue) }"
+            :class="{
+              today: isToday(dateTime),
+              outside: isOutsideMonth(dateTime, calendarValue),
+              current: isCurrent(dateTime),
+            }"
             :key="dateTime.toString()"
           >
             <div>{{ dateTime.day }}</div>
@@ -143,6 +147,12 @@ export default Vue.extend({
     isToday(dateTime: DateTime): boolean {
       const today = DateTime.local();
       return dateTime.hasSame(today, 'day');
+    },
+    isCurrent(dateTime: DateTime): boolean {
+      if (this.parsedValue) {
+        return dateTime.hasSame(this.parsedValue, 'day');
+      }
+      return false;
     },
     isOutsideMonth(dateTime: DateTime, currentDateTime: DateTime): boolean {
       if (this.calendarValue) {
@@ -276,7 +286,12 @@ $day-padding: $day-size / 10;
       width: $day-size;
 
       &.today {
-        background-color: $chive;
+        text-decoration: underline;
+      }
+
+      &.current {
+        background-color: darken($red-onion, 10%);
+        color: white;
       }
 
       &.outside {
