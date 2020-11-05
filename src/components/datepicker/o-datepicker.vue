@@ -214,7 +214,10 @@ export default Vue.extend({
 
       return dateTimes;
     },
-    listeners(): Record<string, Function | Function[]> {
+    listeners(): Record<
+      string,
+      ((event: KeyboardEvent) => void) | ((event: Event) => void) | ((event: Event) => void)[]
+    > {
       return {
         ...this.$listeners,
         blur: this.onBlur,
