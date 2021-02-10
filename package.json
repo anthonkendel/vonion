@@ -37,7 +37,7 @@
   "devDependencies": {
     "@arbetsmyra/commitlint-config": "2.1.0",
     "@arbetsmyra/prettier-config": "1.2.1",
-    "@arbetsmyra/semantic-release-config": "1.1.1",
+    "@arbetsmyra/semantic-release-config": "1.1.15",
     "@commitlint/cli": "11.0.0",
     "@types/jest": "24.9.1",
     "@types/luxon": "1.25.1",
