@@ -32,7 +32,7 @@
     "core-js": "3.8.3",
     "luxon": "1.25.0",
     "vue": "2.6.12",
-    "vue-router": "3.4.9"
+    "vue-router": "3.5.1"
   },
   "devDependencies": {
     "@arbetsmyra/commitlint-config": "2.1.0",
