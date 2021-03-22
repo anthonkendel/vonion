@@ -1,11 +1,7 @@
 <template>
   <o-component-demo title="Legend">
-    <o-legend>
-      Hobbies:
-    </o-legend>
-    <o-legend>
-      Animals:
-    </o-legend>
+    <o-legend> Hobbies: </o-legend>
+    <o-legend> Animals: </o-legend>
   </o-component-demo>
 </template>
 

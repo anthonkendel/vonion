@@ -1,14 +1,8 @@
 <template>
   <o-component-demo title="Label">
-    <o-label>
-      First name
-    </o-label>
-    <o-label>
-      Middle name
-    </o-label>
-    <o-label>
-      Last name
-    </o-label>
+    <o-label> First name </o-label>
+    <o-label> Middle name </o-label>
+    <o-label> Last name </o-label>
   </o-component-demo>
 </template>
 
