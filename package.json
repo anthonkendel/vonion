@@ -38,7 +38,7 @@
     "@arbetsmyra/commitlint-config": "2.1.0",
     "@arbetsmyra/prettier-config": "1.2.1",
     "@arbetsmyra/semantic-release-config": "1.1.25",
-    "@commitlint/cli": "12.1.4",
+    "@commitlint/cli": "15.0.0",
     "@types/jest": "26.0.24",
     "@types/luxon": "1.27.1",
     "@typescript-eslint/eslint-plugin": "4.33.0",
